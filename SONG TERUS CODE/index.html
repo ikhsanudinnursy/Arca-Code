@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>ST Baksoka Explorer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= INTRO SCREEN ================= -->
+<div id="introScreen" class="intro-screen">
+
+<div class="intro-content"> 
+<h1>Museum Song Terus</h1>
+<p>Situs Arkeologi Prasejarah</p>
+</div>
+
+</div>
+
+<header class="navbar">
+
+<div class="logo">
+Museum Song Terus
+
+<img id="langFlag"
+src="https://flagcdn.com/w40/id.png"
+class="flag-switch"
+onclick="toggleLanguage()">
+
+</div>
+
+<div class="search-center">
+<input type="text" id="searchInput" placeholder="Cari..." onkeyup="searchContent()">
+</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav id="navMenu">
+<a href="#" onclick="showSection('home')">Home</a>
+<a href="#" onclick="showSection('tentang')">Tentang</a>
+<a href="#" onclick="showSection('gallery')">Gallery</a>
+<a href="#" onclick="showSection('event')">Event</a>
+<a href="#" onclick="showSection('partner')">Partner</a>
+<a href="#" onclick="showSection('shop')">Merchandise</a>
+<a href="#" onclick="showSection('maps')">Maps</a>
+<a href="#" onclick="showSection('quiz')">Quiz</a>
+</nav>
+</div>
+</header>
+
+
+<!-- HERO -->
+<section id="home" class="content active hero">
+
+    <!-- VIDEO BACKGROUND -->
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="bg-home.mp4" type="video/mp4">
+    </video>
+
+    <!-- OVERLAY -->
+    <div class="hero-overlay"></div>
+
+    <!-- KONTEN -->
+    <div class="hero-content">
+
+        <h2 id="heroTitle">Jelajah Zaman Prasejarah</h2>
+
+        <p id="heroDesc">
+            Temukan kehidupan manusia purba di Museum Song Terus
+        </p>
+
+        <button id="heroBtn" class="hero-btn" onclick="showSection('tentang')">
+            Jelajahi Museum
+        </button>
+
+    </div>
+
+    <div class="scroll-down">↓</div>
+
+</section>
+
+
+<!-- INFO CARDS -->
+<section class="home-info">
+
+<div class="info-card">
+<h3 id="info1Title">Situs Prasejarah</h3>
+<p id="info1Text">
+Song Terus merupakan salah satu situs arkeologi penting yang menyimpan bukti kehidupan manusia purba.
+</p>
+</div>
+
+<div class="info-card">
+<h3 id="info2Title">Lokasi</h3>
+<p id="info2Text">
+Museum ini terletak di Pacitan, Jawa Timur dan menjadi pusat penelitian prasejarah.
+</p>
+</div>
+
+<div class="info-card">
+<h3 id="info3Title">Penemuan Fosil</h3>
+<p id="info3Text">
+Berbagai alat batu dan fosil manusia purba ditemukan di kawasan Song Terus.
+</p>
+</div>
+
+</section>
+
+
+<!-- INSTAGRAM -->
+<a href="https://instagram.com/songterus_museum" target="_blank" class="ig-float">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="24">
+</a>
+
+
+<!-- ================= ABOUT ================= -->
+<section id="tentang" class="content">
+
+<h2 id="tentangTitle">Tentang Museum Song Terus</h2>
+
+<div class="about-slider">
+
+<!-- SLIDE 1 (TEXT) -->
+<div class="about-slide active">
+
+<div class="tentang-image">
+<img src="songterus.jpg">
+</div>
+
+<div class="about-text">
+
+<p id="tentangText1" class="about-highlight"></p>
+<p id="tentangText2"></p>
+<p id="tentangText3"></p>
+
+<h3 id="sejarahTitle"></h3>
+
+<p id="sejarahText1"></p>
+<p id="sejarahText2"></p>
+<p id="sejarahText3"></p>
+
+<h3 id="koleksiTitle"></h3>
+
+<ul class="about-list">
+<li id="koleksi1"></li>
+<li id="koleksi2"></li>
+<li id="koleksi3"></li>
+<li id="koleksi4"></li>
+<li id="koleksi5"></li>
+</ul>
+
+<h3 id="fungsiTitle"></h3>
+
+<ul class="about-list">
+<li id="fungsi1"></li>
+<li id="fungsi2"></li>
+<li id="fungsi3"></li>
+<li id="fungsi4"></li>
+<li id="fungsi5"></li>
+</ul>
+
+<h3 id="menarikTitle"></h3>
+
+<ul class="about-list">
+<li id="menarik1"></li>
+<li id="menarik2"></li>
+<li id="menarik3"></li>
+<li id="menarik4"></li>
+</ul>
+
+</div>
+</div>
+
+<!-- SLIDE 2 (DRIVE) -->
+<div class="drive-card">
+    <div class="drive-icon">🎥</div>
+    <h3>Video Dokumentasi Museum</h3>
+    <p>Lihat video lengkap kegiatan di Museum Song Terus melalui Google Drive.</p>
+
+    <a href="https://drive.google.com/drive/folders/180PC9br1e0Z11GMwpuVsJOw3FY20lqaT?usp=drive_link" target="_blank" class="drive-btn">
+        📂 Buka di Google Drive
+    </a>
+</div>
+
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section id="gallery" class="content">
+
+<h2>Galeri Museum</h2>
+
+<div class="gallery-grid" id="galleryGrid"></div>
+
+</section>
+
+<section id="event" class="content event-section">
+
+<div class="event-header">
+<h2>🎬 Event Kolaborasi Sekolah</h2>
+
+<p>
+Kolaborasi antara SMKN 1 DONOROJO dan Museum Song Terus dalam event fashion show dan penampilan band.
+</p>
+
+<p class="event-meta">📍 Museum Song Terus, Pacitan • 📅 2025</p>
+</div>
+
+<div class="event-grid">
+
+<!-- CARD 1 -->
+<div class="event-card premium">
+<div class="event-number">01</div>
+
+<h3>Fashion Show</h3>
+<p>
+Penampilan fashion show siswa dengan tema budaya dan sejarah.
+</p>
+
+<a href="https://www.instagram.com/reel/DRDxvitkxtC/" target="_blank" class="ig-btn">
+📸 Lihat di Instagram
+</a>
+</div>
+
+<!-- CARD 2 -->
+<div class="event-card premium">
+<div class="event-number">02</div>
+
+<h3>Penampilan Band</h3>
+<p>
+Band siswa membawakan musik penuh semangat dalam nuansa sejarah.
+</p>
+
+<a href="https://www.instagram.com/reel/DRoTW4rk1Di/" target="_blank" class="ig-btn">
+📸 Lihat di Instagram
+</a>
+</div>
+
+</div>
+
+<p class="event-quote">
+“Seni, Budaya, dan Sejarah Bersatu dalam Harmoni”
+</p>
+
+</section>
+
+<!-- ========= PARTNER =========== -->
+<section id="partner" class="content partner-section">
+
+<h2>🤝 Partner Kolaborasi</h2>
+
+<p class="partner-desc">
+Website ini adalah ajang kolaborasi antara SMKN 1 DONOROJO dengan Museum Song Terus
+</p>
+
+<div class="partner-grid">
+
+<div class="partner-card">
+<img src="logosmk-removebg-preview.jpg" alt="Sekolah">
+<p>SMKN 1 DONOROJO</p>
+</div>
+
+<div class="partner-card">
+<img src="logoHia-removebg-preview.jpg" alt="Museum">
+<p>Indonesian Heritage Agency</p>
+</div>
+
+<div class="partner-card">
+<img src="logomst-removebg-preview.jpg"Partner">
+<p>Museum Song Terus</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= MAP ================= -->
+<section id="maps" class="content">
+
+<h2>Lokasi Museum</h2>
+
+<div class="map-container">
+<iframe src="https://www.google.com/maps?q=Museum+Song+Terus+Pacitan&output=embed"></iframe>
+</div>
+
+</section>
+
+
+<!-- ================= QUIZ ================= -->
+<section id="quiz" class="content">
+
+<h2>Quiz Museum</h2>
+
+<div id="quizContainer"></div>
+<div id="feedback"></div>
+
+</section>
+
+<!-- ================= SHOP ================= -->
+<section id="shop" class="content">
+
+<h2>Merchandise Museum</h2>
+
+<div class="Merchandise-grid">
+
+<div class="product">
+<img src="fixdesain1.jpeg">
+<h3>Kaos Song Terus (Warna Putih)</h3>
+<p>Rp 80.000</p>
+<a href="https://wa.me/6282138590601?text=Halo%20saya%20ingin%20beli%20kaos%20Song%20Terus" target="_blank">
+<button>Beli</button>
+</a>
+</div>
+
+<div class="product">
+<img src="fixdesain2.jpeg">
+<h3>Kaos Song Terus (Warna Hitam)</h3>
+<p>Rp 90.000</p>
+<a href="https://wa.me/6282138590601?text=Halo%20saya%20ingin%20beli%20kaos%20Song%20Terus" target="_blank">
+<button>Beli</button>
+</a>
+</div>
+
+<div class="product">
+<img src="mst21.jpeg">
+<h3>Gelas</h3>
+<p>Rp 40.000</p>
+<a href="https://wa.me/6282138590601?" target="_blank">
+<button>Beli</button>
+</a>
+</div>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
